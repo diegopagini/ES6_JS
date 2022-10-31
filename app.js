@@ -1,30 +1,25 @@
 /** @format */
 
-const NAME = 'Diego';
-const PHONE = 123456;
+function tag(literals, ...substitutions) {
+	console.log(arguments);
+	/**
+	 * 0: [
+	 * 0: ""
+	 * 1: " lapices cuestan "
+	 * 2: "€"
+	 * ],
+	 * 1: 5,
+	 * 2: 50
+	 */
 
-console.log('Su nombre es: ' + NAME + ', y su teléfono es: ' + PHONE); // Su nombre es: Diego, y su teléfono es: 123456
-// ES6
-console.log(`Su nombre es: ${NAME}, y su teléfono es: ${PHONE}`); // Su nombre es: Diego, y su teléfono es: 123456
+	console.log(literals); /** 0: [ 0: "", 1: " lapices cuestan ", 2: "€"] */
 
-const name = 'Diego';
-const lastName = 'Pagini';
-const fullName = `${name} ${lastName}`; // Diego Pagini
-
-function getFullName() {
-	return 'Diego Pagini';
+	console.log(substitutions); /** [5, 50] */
+	return 'Otro texto';
 }
 
-const fullName2 = `El nombre completo es: ${getFullName()}`; // Diego Pagini
+let units = 5,
+	unit_cost = 10;
 
-let multiLine = `<h1>Título</h1>
-<h2>Subtítulo</h2>
-<p>Texto</p>
-`;
-
-console.log(multiLine);
-/**
-<h1>Título</h1>
-<h2>Subtítulo</h2>
-<p>Texto</p>
-*/
+let msg = tag`${units} lapices cuestan ${units * unit_cost}€`;
+console.log(msg); // Otro texto
