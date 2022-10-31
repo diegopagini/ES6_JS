@@ -58,3 +58,27 @@ console.log(multiLine);
 <h2>Subtítulo</h2>
 <p>Texto</p>
 */
+
+/**
+ * Toda función tiene argumentos aunque a esta no se le pasen.
+ */
+function tag(literals, ...substitutions) {
+	console.log(arguments); /** 0: [ 0: "", 1: " lapices cuestan ", 2: "€" ], 1: 5, 2: 50 */
+	let result = '';
+	console.log(literals); /** 0: [ 0: "", 1: " lapices cuestan ", 2: "€"] */
+	console.log(substitutions); /** [5, 50] */
+
+	for (let i = 0; i < substitutions.length; i++) {
+		result += literals[i];
+		result += substitutions[i];
+	}
+
+	console.log(result); // 5 lapices cuestan 50
+	return 'Otro texto';
+}
+
+let units = 5,
+	unit_cost = 10;
+
+let msg = tag`${units} lapices cuestan ${units * unit_cost}€`;
+console.log(msg); // Otro texto
