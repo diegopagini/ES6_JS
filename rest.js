@@ -31,3 +31,10 @@ console.log(studentsArr3);
 
 // function putTogetherNames(...names, lastName){} // Uncaught SyntaxError: Rest parameter must be last formal parameter
 function putTogetherNames(lastName, ...names) {}
+
+function saludarRest(saludo, ...nombres) {
+	for (i in nombres) {
+		console.log(`${saludo} ${nombres[i]}`);
+	}
+}
+saludarRest('Hola', 'Diego', 'Juan', 'Pepe'); // Hola Diego Hola Juan Hola Pepe

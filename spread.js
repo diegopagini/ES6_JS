@@ -14,3 +14,14 @@ console.log(Math.max.apply(Math, nums)); // 1144
 
 // ES6
 console.log(Math.max(...nums)); // 1144
+
+const personas = ['Maria', ' Priscila', ' Ester'];
+function saludarSpread(saludo, ...nombres) {
+	console.log(`${saludo} ${nombres}.`);
+}
+
+saludarSpread('Que tal!', personas); // Que tal! Maria, Priscila, Ester.
+
+let partes = ['brazos', 'piernas'];
+let cuerpo = ['cabeza', 'cuello', ...partes, 'pies', 'dedos'];
+console.log(cuerpo); // ['cabeza', 'cuello', 'brazos', 'piernas', 'pies', 'dedos']

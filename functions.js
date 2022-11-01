@@ -45,3 +45,23 @@ function sum2(a = 1, b = 2) {
 	console.log(arguments);
 }
 sum2(); // []
+
+function People(name) {
+	this.name = name;
+}
+
+var people = new People('Diego');
+var noPeople = People('Diego');
+console.log(people); // {name: 'Diego'} // con "new" this apunta al objeto
+console.log(noPeople); // undefined // sin "new" this apunta el objeto global.
+
+// ES5
+function People2(name) {
+	if (typeof new.target !== 'undefined') {
+		this.name = name;
+	} else {
+		throw new Error('Esta función debe de ser utilizada con la palabra reservada new');
+	}
+}
+let people2 = People2('Test'); // Esta función debe de ser utilizada con la palabra reservada new
+let noPeople2 = People.call(people2, 'Diego');

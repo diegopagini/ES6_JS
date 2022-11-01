@@ -21,3 +21,25 @@ let person3 = { ...person1 }; // Se extrae cada propiedad y se asigna al objeto.
 person3.name = 'Pedro';
 console.log(person1); // { name: 'Juan',	age: 30 };
 console.log(person3); // { name: 'Pedro',	age: 30 };
+
+// COpiar objetos
+
+let obj1 = {
+	name: 'test',
+	age: 20,
+};
+
+let obj2 = {
+	name: 'Juan',
+	age: 18,
+	address: 'Siempreviva 123',
+	isDriver: true,
+	vehicle: true,
+	vegetarian: false,
+	isMarried: true,
+};
+
+obj1 = { ...obj2 };
+
+console.log(obj1); // {"name": "Juan", "age": 18, "address": "Siempreviva 123", "isDriver": true, "vehicle": true,"vegetarian": false, "isMarried": true }
+console.log(obj2); // {"name": "Juan", "age": 18, "address": "Siempreviva 123", "isDriver": true, "vehicle": true,"vegetarian": false, "isMarried": true }
