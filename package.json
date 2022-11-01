@@ -1,0 +1,22 @@
+{
+	"name": "es6",
+	"version": "1.0.0",
+	"description": "ES6",
+	"main": "app.js",
+	"scripts": {},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/diegopagini/ES6_JS.git"
+	},
+	"keywords": [
+		"ES6",
+		"js",
+		"Javascript"
+	],
+	"author": "Diego Pagini",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/diegopagini/ES6_JS/issues"
+	},
+	"homepage": "https://github.com/diegopagini/ES6_JS#readme"
+}

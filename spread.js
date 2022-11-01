@@ -3,7 +3,6 @@
 // SPREAD
 let num1 = 10,
 	num2 = 30;
-
 let max = Math.max(num1, num2);
 console.log(max); // 30
 
