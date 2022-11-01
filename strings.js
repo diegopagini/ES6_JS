@@ -82,3 +82,7 @@ let units = 5,
 
 let msg = tag`${units} lapices cuestan ${units * unit_cost}€`;
 console.log(msg); // Otro texto
+
+let message = `Hola Mundo\nMundo\\`,
+	message2 = String.raw`Hola Mundo\nMundo\\`;
+console.log(message, message2); // Hola Mundo Mundo\ Hola Mundo\nMundo\\
