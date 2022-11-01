@@ -4,7 +4,7 @@
 var msg = 'Hola Mundo!'; // scope global.
 // console.log(msg); // Hola Mundo!
 
-// console.log(message); // app.js:7 Uncaught ReferenceError: Cannot access 'message' before initialization
+// console.log(message); // Uncaught ReferenceError: Cannot access 'message' before initialization
 let message = 'Hola mundo.';
 // console.log(message); // Hola mundo.
 
@@ -13,7 +13,7 @@ if (1 === 3) {
 	let test = 'Test';
 }
 // console.log(data); // undefined
-// console.log(test); // Uncaught ReferenceError: test is not defined at app.js:16:13
+// console.log(test); // Uncaught ReferenceError: test is not defined at
 
 let test = 'test';
 if (1 === 1) {
