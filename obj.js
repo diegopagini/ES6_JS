@@ -43,3 +43,71 @@ obj1 = { ...obj2 };
 
 console.log(obj1); // {"name": "Juan", "age": 18, "address": "Siempreviva 123", "isDriver": true, "vehicle": true,"vegetarian": false, "isMarried": true }
 console.log(obj2); // {"name": "Juan", "age": 18, "address": "Siempreviva 123", "isDriver": true, "vehicle": true,"vegetarian": false, "isMarried": true }
+
+// ES5
+function createPeople(name, surname, age) {
+	return {
+		name: name,
+		surname: surname,
+		age: age,
+	};
+}
+
+// ES6
+const createPeople = (name, surname, age) => ({
+	name,
+	surname,
+	age,
+});
+
+// Métodos concisos
+// ES5
+var persona = {
+	name: 'Diego',
+	getName: function () {
+		console.log(this.name);
+	},
+};
+
+// ES6
+const persona = {
+	name: 'Diego',
+	getName() {
+		console.log(this.name);
+	},
+};
+
+// Object.is()
+console.log(+0 == -0); // true
+console.log(+0 === -0); // true
+console.log(Object.is(+0, -0)); // false
+console.log(NaN === NaN); // false
+console.log(NaN == NaN); // false
+console.log(Object.is(NaN, NaN)); // true
+console.log(5 == '5'); // true
+console.log(5 == 5); // true
+console.log(5 === 5); // false
+console.log(Object.is(5, 5)); // true
+console.log(Object.is(5, '5')); // false
+
+// Object.assign()
+
+// ES5
+function mezclar(objReceptor, objDonador) {
+	Object.keys(objDonador).forEach(function (key) {
+		objReceptor[key] = objDonador[key];
+	});
+
+	return objReceptor;
+}
+
+const objReceptor = {};
+const objDonador = {
+	get name() {
+		return 'mi-archivo.js';
+	},
+};
+console.log(mezclar(objReceptor, objDonador)); // {name: 'mi-archivo.js'}
+
+// ES6
+console.log(Object.assign(objReceptor, objDonador)); // {name: 'mi-archivo.js'}
