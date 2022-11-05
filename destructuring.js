@@ -61,3 +61,38 @@ let {
 console.log(otroSuperNodo); // { linea: 11, columna: 2 }
 let otroSuperNodo2 = autoGuardado.otroNodo.subNodo.cursor;
 console.log(otroSuperNodo2); // { linea: 11, columna: 2 }
+
+const frutas = ['banana', 'pera', 'uva'];
+let [fruta1, fruta2] = frutas;
+console.log(fruta1, fruta2); // banana pera
+let [, , fruta3] = frutas;
+console.log(fruta3); // uva
+
+let otraFruta = 'manzana';
+[otraFruta] = frutas;
+console.log(otraFruta); // banana
+
+let a = 1;
+let b = 2;
+let temp;
+
+temp = a;
+a = b;
+b = temp;
+console.log(a); // 2
+console.log(b); // 1
+
+[a, b] = [b, a];
+console.log(a); // 1
+console.log(b); // 2
+
+let colores1 = ['rojo', ['verde', 'amarillo'], 'morado', 'naranja'];
+let [color1, [color2]] = colores1;
+
+console.log(color1); // rojo
+console.log(color2); // verde
+
+let colores2 = ['rojo', 'verde', 'amarillo', 'morado', 'naranja'];
+let [colorPrincipal, ...demasColores] = colores2;
+console.log(colorPrincipal); // rojo
+console.log(demasColores); // ['verde', 'amarillo', 'morado', 'naranja']
