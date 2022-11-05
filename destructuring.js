@@ -96,3 +96,33 @@ let colores2 = ['rojo', 'verde', 'amarillo', 'morado', 'naranja'];
 let [colorPrincipal, ...demasColores] = colores2;
 console.log(colorPrincipal); // rojo
 console.log(demasColores); // ['verde', 'amarillo', 'morado', 'naranja']
+
+let fruits = ['banano'];
+let [fruit1, fruit2 = 'manzana'] = fruit1;
+console.log(fruit1, fruit2); // banano, manzana
+
+const opciones = {
+	nombre: 'diego',
+};
+let { nombre, apellido = 'Pagini' } = opciones;
+console.log(nombre, apellido); // diego Pagini
+
+// ES5
+function crearJugador(nickname, opciones) {
+	opciones = opciones || {};
+	let hp = opciones.hp,
+		sp = opciones.sp,
+		clase = opciones.clase;
+
+	console.log(hp, sp, clase);
+
+	// código para crear jugador
+}
+
+crearJugador('LightBringer', { hp: 100, sp: 100, clase: 'Mago' });
+
+// ES6
+function createPlayer(nickname, { hp, sp, clase } = { hp: 100, sp: 50, clase: 'Mago' }) {
+	console.log(hp, sp, clase);
+}
+createPlayer('LightBringer', { hp: 100, sp: 100, clase: 'Mago' });
