@@ -2,4 +2,4 @@
 
 # ES6
 
-arrow functions, destructuring, functions, maps, objects, prototypes, rest, set, spread, strings, symbol, var-let-const.
+arrow functions, destructuring, for-of, functions, maps, objects, prototypes, rest, set, spread, strings, symbol, var-let-const.
